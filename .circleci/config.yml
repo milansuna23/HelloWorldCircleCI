@@ -1,15 +1,17 @@
 version: 2
-messageBody: "Hello World"
+
 jobs:
   build:
     docker: # use the docker executor type; machine and macos executors are also supported
       - image: circleci/node:latest # the primary container, where your job's commands are run
+        environment:
+          messageBody: "Hello World"
     steps:
       - checkout # check out the code in the project directory
       - run: 
           name: PrintHelloWorld 
           command: |
-              echo ${ messageBody }             
+              echo ${messageBody}             
   test:
     docker:
       - image: circleci/node:latest
