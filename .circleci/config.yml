@@ -9,7 +9,7 @@ jobs:
       - run: 
           name: PrintHelloWorld 
           command: |
-              echo <<: *messageBody
+              echo $messageBody
               echo "I love myself"
   test:
     docker:
