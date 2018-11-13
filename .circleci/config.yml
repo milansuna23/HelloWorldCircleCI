@@ -5,10 +5,14 @@ jobs:
       - image: circleci/node:latest # the primary container, where your job's commands are run
     steps:
       - checkout # check out the code in the project directory
-      - run: echogg "hello world" # run the `echo` command
+      - run: 
+            command: |
+            echo "hello world" # run the `echo` command
   test:
     docker:
       - image: circleci/node:latest
     steps:
       - checkout
-      - run: echogg "I love coding"
+      - run: 
+            command: |
+            echogg "I love coding"
