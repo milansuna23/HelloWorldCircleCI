@@ -9,7 +9,7 @@ jobs:
           name: PrintHelloWorld 
           command: |
               echo "hello world" # run the `echo` command
-              echog "I love myself"
+              echo "I love myself"
   test:
     docker:
       - image: circleci/node:latest
@@ -19,3 +19,10 @@ jobs:
           name: TestRun
           command: |
               echogg "I love coding"
+              
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
+      - test
