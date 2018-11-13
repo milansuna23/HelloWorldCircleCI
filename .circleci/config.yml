@@ -9,7 +9,7 @@ jobs:
       - run: 
           name: PrintHelloWorld 
           command: |
-              echo<<: $messageBody              
+              echo $messageBody              
   test:
     docker:
       - image: circleci/node:latest
