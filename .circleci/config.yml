@@ -9,8 +9,7 @@ jobs:
       - run: 
           name: PrintHelloWorld 
           command: |
-              echo <<: $messageBody
-              echo "I love myself"
+              echo <<: $messageBody              
   test:
     docker:
       - image: circleci/node:latest
@@ -20,7 +19,7 @@ jobs:
           name: TestRun
           command: |
               echo "I love coding"
-              echogh "I love to watch Sports"
+              echo "I love to watch Sports"
               
 workflows:
   version: 2
