@@ -1,5 +1,5 @@
 version: 2
-&messageBody: "Hello World"
+messageBody: "Hello World"
 jobs:
   build:
     docker: # use the docker executor type; machine and macos executors are also supported
@@ -9,7 +9,7 @@ jobs:
       - run: 
           name: PrintHelloWorld 
           command: |
-              echo <<: *messageBody
+              echo <<: $messageBody
               echo "I love myself"
   test:
     docker:
