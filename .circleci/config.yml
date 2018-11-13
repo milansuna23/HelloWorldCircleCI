@@ -13,5 +13,4 @@ jobs:
     steps:
       - checkout
       - run: 
-            command: |
-            echogg "I love coding"
+          command: echogg "I love coding"
