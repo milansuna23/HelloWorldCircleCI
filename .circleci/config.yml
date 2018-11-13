@@ -18,7 +18,7 @@ jobs:
       - run: 
           name: TestRun
           command: |
-              echogg "I love coding"
+              echogh "I love coding"
               
 workflows:
   version: 2
