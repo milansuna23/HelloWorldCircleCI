@@ -11,4 +11,4 @@ jobs:
       - image: circleci/node:latest
     steps:
       - checkout
-      - run: echo "I love coding"
+      - run: echogg "I love coding"
