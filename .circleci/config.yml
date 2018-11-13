@@ -15,4 +15,6 @@ jobs:
     steps:
       - checkout
       - run: 
-          command: echogg "I love coding"
+          name: TestRun
+          command: |
+              echogg "I love coding"
